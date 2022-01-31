@@ -25,27 +25,27 @@ const ProfileIntro = () => {
       <div className={styPict}>
         <div className={styPictWebDev}>
           <Tilt>
-            <img src={PictWebDev} alt="Logo" />
+            <img src={PictWebDev} alt="Website Developer" />
           </Tilt>
         </div>
         <div className={styPictDesignDev}>
           <Tilt>
-            <img src={PicUiDesignerTitle} alt="Logo" />
+            <img src={PicUiDesignerTitle} alt="Design UI" />
           </Tilt>
         </div>
         <div className={styPictAndroidDev}>
           <Tilt>
-            <img src={PictTitleAndroidDev} alt="Logo" />
+            <img src={PictTitleAndroidDev} alt="Android Developer" />
           </Tilt>
         </div>
         <div className={styPictIosDev}>
           <Tilt>
-            <img src={PictIosDevTitle} alt="Logo" />
+            <img src={PictIosDevTitle} alt="IOS Developer" />
           </Tilt>
         </div>
       </div>
-      <img src={PictProfile} className={styPict2} alt="Logo" />
       <div className={styLine} />
+      <img src={PictProfile} className={styPict2} alt="Profile" />
     </div>
   );
 };

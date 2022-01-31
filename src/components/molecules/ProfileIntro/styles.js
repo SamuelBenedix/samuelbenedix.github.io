@@ -3,6 +3,9 @@ import { colors } from '../../../utils';
 
 export const styContainerPict = css`
   position: relative;
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 30px;
+  }
 `;
 
 export const styPict = css`
@@ -14,46 +17,85 @@ export const styPict = css`
 `;
 
 export const styPict2 = css`
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translate(-100%, -50%);
-  z-index: 2;
+  position: relative;
+  @media screen and (max-width: 1024px) {
+    width: 400px;
+  }
+  @media screen and (max-width: 1400px) {
+    width: 400px;
+  }
 `;
 
 export const styPictIosDev = css`
   position: absolute;
-  top: 0;
-  left: 0;
-  transform: translate(-110%, 250%);
+  top: 140px;
+  left: 380px;
+  @media screen and (max-width: 1024px) {
+    top: 80px;
+    left: 280px;
+    img {
+      width: 120px;
+    }
+  }
+  @media screen and (max-width: 1400px) {
+    top: 80px;
+    left: 280px;
+    img {
+      width: 130px;
+    }
+  }
 `;
 
 export const styPictAndroidDev = css`
   position: absolute;
-  top: 0;
-  left: 0;
-  transform: translate(-320%, 230%);
+  top: 80px;
+  left: -40px;
+  @media screen and (max-width: 1024px) {
+    img {
+      width: 120px;
+    }
+  }
+  @media screen and (max-width: 1400px) {
+    img {
+      width: 150px;
+    }
+  }
 `;
 
 export const styPictWebDev = css`
   position: absolute;
-  top: 0;
-  left: 0;
-  transform: translate(-70%, -350%);
+  top: -180px;
+  left: 420px;
+  @media screen and (max-width: 1024px) {
+    top: -150px;
+    left: 320px;
+    img {
+      width: 120px;
+    }
+  }
+  @media screen and (max-width: 1400px) {
+    top: -150px;
+    left: 320px;
+    img {
+      width: 150px;
+    }
+  }
 `;
 
 export const styPictDesignDev = css`
   position: absolute;
-  top: 0;
-  left: 0;
-  transform: translate(-360%, -200%);
-`;
-
-export const styLinkWrapper = css`
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: translate(-360%, -200%);
+  top: -120px;
+  left: -30px;
+  @media screen and (max-width: 1024px) {
+    img {
+      width: 120px;
+    }
+  }
+  @media screen and (max-width: 1400px) {
+    img {
+      width: 130px;
+    }
+  }
 `;
 
 export const styLine = css`
@@ -61,5 +103,9 @@ export const styLine = css`
   height: 50px;
   background-color: ${colors.primary[900]};
   width: 100vh;
-  transform: translate(-70%, 580%);
+  left: 0;
+  bottom: 0;
+  transition: all 0.5s;
+  @media screen and (max-width: 1400px) {
+  }
 `;

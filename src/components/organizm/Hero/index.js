@@ -11,6 +11,7 @@ const Hero = () => {
         <Intro />
         <ProfileIntro />
       </div>
+
       <img className={styBackground} src={BgLogo} alt="Logo" />
     </section>
   );

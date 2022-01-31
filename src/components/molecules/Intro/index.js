@@ -5,7 +5,7 @@ import { styIntro, styName, styDot, styTitle } from './styles';
 const Intro = () => {
   return (
     <div>
-      <p className={styIntro}>Hello, My Name</p>
+      <p className={styIntro}>Hello, my name is</p>
       <h1 className={styName}>
         Samuel B<span className={styDot}>.</span>
       </h1>
