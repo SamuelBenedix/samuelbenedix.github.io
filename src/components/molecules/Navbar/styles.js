@@ -2,8 +2,9 @@ import { css } from '@emotion/css';
 import { colors } from '../../../utils';
 
 export const styMainMenu = css`
-  background: ${colors.light[900]};
   width: 100%;
+  position: absolute;
+  z-index: 9999;
 `;
 
 export const styNavbarWrapper = css`
@@ -11,16 +12,17 @@ export const styNavbarWrapper = css`
   flex-flow: row nowrap;
   align-items: center;
   justify-content: space-between;
-  @media screen and (max-width: 970px) {
+  @media screen and (max-width: 768px) {
     align-items: center;
     justify-content: space-between;
+    padding: 20px 10px;
   }
 `;
 
 export const styNavbarToggle = css`
   visibility: hidden;
   display: none;
-  @media screen and (max-width: 970px) {
+  @media screen and (max-width: 768px) {
     visibility: visible;
     display: block;
     left: 0;
@@ -38,23 +40,26 @@ export const styNavbarToggle = css`
 `;
 
 export const styShowSidebar = css`
-  @media screen and (max-width: 970px) {
+  @media screen and (max-width: 768px) {
     visibility: visible;
-    background-color: rgba(0, 0, 0, 0.6);
+    filter: blur(4px);
+    background: rgba(0, 0, 0, 0.6);
   }
 `;
 
 export const styMobileNavLinks = css`
-  @media screen and (max-width: 970px) {
+  @media screen and (max-width: 768px) {
     left: 0;
   }
 `;
 
-export const styLinkWrapper = css`
+export const styLinkWrapper = (toggle) => css`
   position: relative;
-  @media screen and (max-width: 970px) {
-    visibility: hidden;
-    background-color: rgba(0, 0, 0, 0.6);
+  @media screen and (max-width: 768px) {
+    visibility: ${toggle ? 'visible' : 'hidden'};
+    display:${toggle ? 'block' : 'none'}
+    transition: all 0.5s;
+    background-color: rgba(0, 0, 0, 0.3);
     position: fixed;
     height: 100vh;
     width: 100%;
@@ -64,19 +69,13 @@ export const styLinkWrapper = css`
   }
 `;
 
-export const styLinkWrapperClose = css`
-  @media screen and (max-width: 970px) {
-    visibility: visible;
-  }
-`;
-
-export const styNavLinks = css`
+export const styNavLinks = (toggle) => css`
   display: inline-flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 0;
   padding-left: 0;
-  @media screen and (max-width: 970px) {
+  @media screen and (max-width: 768px) {
     display: block;
     position: fixed;
     height: 100vh;
@@ -84,16 +83,9 @@ export const styNavLinks = css`
     max-width: calc(100% - 30px);
     z-index: 1101;
     top: 0;
-    left: -420px;
+    right: ${!toggle ? -420 : 0}px;
     transition: all 0.5s;
     background-color: #fff;
-    overflow: scroll;
-  }
-`;
-
-export const styNavLinksOpen = css`
-  @media screen and (max-width: 970px) {
-    left: 0px;
   }
 `;
 
@@ -101,7 +93,7 @@ export const styNavLink = css`
   list-style: none;
   padding: 30px 25px;
   cursor: pointer;
-  @media screen and (max-width: 970px) {
+  @media screen and (max-width: 768px) {
     display: block;
     width: 100%;
     padding: 0;
@@ -117,12 +109,11 @@ export const styNavItem = (active) => css`
   &:hover {
     color: ${colors.primary[900]};
   }
-
-  @media screen and (max-width: 970px) {
+  @media screen and (max-width: 768px) {
     width: 100%;
-    padding: 15px 25px;
+    padding: 20px 25px;
     display: block;
-    font-size: 15px;
+    font-size: 22px;
     letter-spacing: 1px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.18);
   }
@@ -130,9 +121,9 @@ export const styNavItem = (active) => css`
 
 export const styCloseSidebar = css`
   display: none;
-  @media screen and (max-width: 970px) {
+  @media screen and (max-width: 768px) {
     display: block;
-    margin: 10px 20px 0 auto;
+    margin: 22px 30px 0px auto;
     font-size: 27px;
     cursor: pointer;
     &:hover {
@@ -144,9 +135,12 @@ export const styCloseSidebar = css`
 export const styIndicator = (width, left) => css`
   position: absolute;
   bottom: 25px;
-  width: ${width ? width / 2 : 28}px;
-  left: ${left ? left : 25}px;
+  width: ${width / 2}px;
+  left: ${left}px;
   height: 3.5px;
   background: ${colors.primary[900]};
   transition: all 0.5s ease-in-out;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;

@@ -1,6 +1,6 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Logo } from '../../../assets';
+import { IcClose, IcHamburger, Logo } from '../../../assets';
 import {
   styMainMenu,
   styNavbarWrapper,
@@ -9,6 +9,8 @@ import {
   styNavItem,
   styLinkWrapper,
   styIndicator,
+  styNavbarToggle,
+  styCloseSidebar,
 } from './styles';
 
 import { styContainer } from '../../../global';
@@ -19,6 +21,32 @@ const Navbar = () => {
 
   const [indicatorPosition, setIndicatorPosition] = useState();
   const [indicatorWidth, setIndicatorWidth] = useState();
+  const [toggle, setToggle] = useState(false);
+
+  useEffect(() => {
+    switch (location.pathname) {
+      case '/':
+        setIndicatorPosition(25);
+        setIndicatorWidth(58);
+        break;
+      case '/about':
+        setIndicatorPosition(131);
+        setIndicatorWidth(58);
+        break;
+      case '/contact':
+        setIndicatorPosition(238);
+        setIndicatorWidth(72);
+        break;
+      case '/project':
+        setIndicatorPosition(362);
+        setIndicatorWidth(66);
+        break;
+      default:
+        setIndicatorPosition(25);
+        setIndicatorWidth(28);
+        break;
+    }
+  }, [location.pathname]);
 
   const handleClick = (event) => {
     const linkLeft = event.target.getBoundingClientRect().left;
@@ -36,10 +64,27 @@ const Navbar = () => {
       <div className={styContainer}>
         <nav className={styNavbarWrapper}>
           <Link to="/">
-            <img src={Logo} alt="React Logo" />
+            <img src={Logo} alt="Logo" />
           </Link>
-          <div className={styLinkWrapper} ref={navElement}>
-            <ul className={styNavLinks}>
+          <button
+            className={styNavbarToggle}
+            onClick={() => {
+              setToggle(!toggle);
+            }}
+            type="button"
+          >
+            <img src={IcHamburger} alt="Menu" />
+          </button>
+          <div className={styLinkWrapper(toggle)} ref={navElement}>
+            <ul className={styNavLinks(toggle)}>
+              <img
+                className={styCloseSidebar}
+                onClick={() => {
+                  setToggle(!toggle);
+                }}
+                src={IcClose}
+                alt="Menu"
+              />
               <li className={styNavLink}>
                 <Link
                   className={styNavItem(location.pathname === '/')}
