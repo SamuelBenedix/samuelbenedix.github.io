@@ -3,6 +3,7 @@ import { colors } from '../../../utils';
 
 export const styContainerPict = css`
   position: relative;
+  transition: all 0.5s;
   @media screen and (max-width: 1024px) {
     margin-bottom: 30px;
   }
@@ -10,6 +11,7 @@ export const styContainerPict = css`
 
 export const styPict = css`
   top: 50%;
+  transition: all 0.5s;
   transform: translate(-100%, -50%);
   position: absolute;
   z-index: 3;
@@ -18,6 +20,7 @@ export const styPict = css`
 
 export const styPict2 = css`
   position: relative;
+  transition: all 0.5s;
   @media screen and (max-width: 1024px) {
     width: 400px;
   }
@@ -30,6 +33,7 @@ export const styPictIosDev = css`
   position: absolute;
   top: 140px;
   left: 380px;
+  transition: all 0.5s;
   @media screen and (max-width: 1024px) {
     top: 80px;
     left: 280px;
@@ -50,6 +54,7 @@ export const styPictAndroidDev = css`
   position: absolute;
   top: 80px;
   left: -40px;
+  transition: all 0.5s;
   @media screen and (max-width: 1024px) {
     img {
       width: 120px;
@@ -66,6 +71,7 @@ export const styPictWebDev = css`
   position: absolute;
   top: -180px;
   left: 420px;
+  transition: all 0.5s;
   @media screen and (max-width: 1024px) {
     top: -150px;
     left: 320px;
@@ -86,6 +92,7 @@ export const styPictDesignDev = css`
   position: absolute;
   top: -120px;
   left: -30px;
+  transition: all 0.5s;
   @media screen and (max-width: 1024px) {
     img {
       width: 120px;

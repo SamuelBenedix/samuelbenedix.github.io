@@ -1,8 +1,41 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
-import React from 'react';
-import { styIntro, styName, styDot, styTitle } from './styles';
+import React, { useEffect, useState, useRef } from 'react';
+import { Button } from '../../atoms';
+import {
+  styIntro,
+  styName,
+  styDot,
+  styTitle,
+  styBtnPosition,
+  styWrapper,
+} from './styles';
 
 const Intro = () => {
+  const [elementPosition, setElementPosition] = useState();
+
+  const btnPosition = useRef();
+
+  const onScroll = () => {
+    let offsetTop = btnPosition.current.getBoundingClientRect().top;
+    console.log(offsetTop);
+    if (offsetTop < 50) {
+      setElementPosition(true);
+    }
+    if (offsetTop > 50) {
+      setElementPosition(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+    };
+  }, []);
+
+  console.log('element Position', elementPosition);
+
   return (
     <div>
       <p className={styIntro}>Hello, my name is</p>
@@ -14,6 +47,11 @@ const Intro = () => {
         <span className={styDot}> // </span>
         Developer
       </h3>
+      <div className={styWrapper} ref={btnPosition}>
+        <div className={styBtnPosition(elementPosition)}>
+          <Button main={true} position={elementPosition} />
+        </div>
+      </div>
     </div>
   );
 };

@@ -40,4 +40,5 @@ export const styContent = css`
 export const styBackground = css`
   position: absolute;
   margin-top: 30px;
+  z-index: -1;
 `;

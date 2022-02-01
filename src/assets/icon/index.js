@@ -6,6 +6,7 @@ import IcDribble from './dribble.svg';
 import IcLinkedin from './linkedin.svg';
 import IcBehance from './behance.svg';
 import BgLogo from './bg-logo.svg';
+import IcArrow from './arrow.svg';
 
 export {
   Logo,
@@ -16,4 +17,5 @@ export {
   IcLinkedin,
   IcBehance,
   BgLogo,
+  IcArrow,
 };

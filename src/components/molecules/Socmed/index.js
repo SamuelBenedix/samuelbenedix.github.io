@@ -1,5 +1,6 @@
 import React from 'react';
-import { IcBehance, IcDribble, IcGithub, IcLinkedin } from '../../../assets';
+import { IcBehance, IcDribble } from '../../../assets';
+import { Instagram, Linkedin, GitHub } from 'react-feather';
 
 import { styContainerSocmed, stySocmedList, styList } from './styles';
 
@@ -13,7 +14,16 @@ const Socmed = () => {
             href="https://github.com/SamuelBenedix"
             rel="noreferrer"
           >
-            <img src={IcGithub} alt="Github" />
+            <GitHub color="#0088FF" size={24} />
+          </a>
+        </li>
+        <li className={styList}>
+          <a
+            target="_blank"
+            href="https://www.instagram.com/samuelbenedix/"
+            rel="noreferrer"
+          >
+            <Instagram color="#0088FF" size={24} />
           </a>
         </li>
         <li className={styList}>
@@ -40,7 +50,7 @@ const Socmed = () => {
             href="https://www.linkedin.com/in/samuelbenedix/"
             rel="noreferrer"
           >
-            <img src={IcLinkedin} alt="LinkedIn" />
+            <Linkedin color="#0088FF" size={24} />
           </a>
         </li>
       </ul>

@@ -36,7 +36,8 @@ export const stySocmedList = css`
 
 export const styList = css`
   padding: 14px;
+  transition: all 0.5s;
   &:hover {
-    transform: translateY(-3.4px);
+    transform: translateY(-5px);
   }
 `;
