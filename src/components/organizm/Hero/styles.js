@@ -6,10 +6,15 @@ export const stySection = css`
   flex-direction: column;
   align-items: flex-start;
   min-height: 100vh;
+  height: 100%;
   padding-top: 0px;
   position: relative;
+  margin-bottom: 50px;
   @media (max-width: 480px) and (min-height: 700px) {
     padding-bottom: 10vh;
+  }
+  @media screen and (max-width: 1024px) {
+    margin-top: 50px;
   }
 `;
 
@@ -40,5 +45,5 @@ export const styContent = css`
 export const styBackground = css`
   position: absolute;
   margin-top: 30px;
-  z-index: -1;
+  z-index: 0;
 `;

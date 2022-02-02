@@ -1,6 +1,6 @@
 import React from 'react';
-import { IcBehance, IcDribble } from '../../../assets';
-import { Instagram, Linkedin, GitHub } from 'react-feather';
+import { IcBehance } from '../../../assets';
+import { Instagram, Linkedin, GitHub, Dribbble } from 'react-feather';
 
 import { styContainerSocmed, stySocmedList, styList } from './styles';
 
@@ -10,6 +10,7 @@ const Socmed = () => {
       <ul className={stySocmedList}>
         <li className={styList}>
           <a
+            title="Github @samuelbenedix"
             target="_blank"
             href="https://github.com/SamuelBenedix"
             rel="noreferrer"
@@ -19,6 +20,7 @@ const Socmed = () => {
         </li>
         <li className={styList}>
           <a
+            title="Instagram @samuelbenedix"
             target="_blank"
             href="https://www.instagram.com/samuelbenedix/"
             rel="noreferrer"
@@ -28,24 +30,27 @@ const Socmed = () => {
         </li>
         <li className={styList}>
           <a
+            title="Behance @samuelben"
             target="_blank"
             href="https://www.behance.net/samuelben"
             rel="noreferrer"
           >
-            <img src={IcBehance} alt="Behance" />
+            <IcBehance />
           </a>
         </li>
         <li className={styList}>
           <a
+            title="Dribbble @samuelben"
             target="_blank"
             href="https://dribbble.com/SamuelBen"
             rel="noreferrer"
           >
-            <img src={IcDribble} alt="Dribble" />
+            <Dribbble color="#0088FF" size={24} />
           </a>
         </li>
         <li className={styList}>
           <a
+            title="Linkedin @samuelbenedix"
             target="_blank"
             href="https://www.linkedin.com/in/samuelbenedix/"
             rel="noreferrer"

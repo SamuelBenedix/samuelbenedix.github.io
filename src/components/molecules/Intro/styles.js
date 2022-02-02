@@ -46,11 +46,8 @@ export const styBtnPosition = (position = false) => css`
   left: 0;
   width: 100%;
   height: 100vh;
-
   @media screen and (max-width: 1024px) {
-    justify-content: center;
-    align-items: center;
-    display: flex;
+    left: 24%;
   }
 `;
 

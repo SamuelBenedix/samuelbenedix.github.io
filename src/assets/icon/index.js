@@ -4,9 +4,10 @@ import IcHamburger from './menu-hamburger.svg';
 import IcGithub from './github.svg';
 import IcDribble from './dribble.svg';
 import IcLinkedin from './linkedin.svg';
-import IcBehance from './behance.svg';
+import IcBehance from './behance.js';
 import BgLogo from './bg-logo.svg';
 import IcArrow from './arrow.svg';
+import BackgroundLogo from './bg-logo';
 
 export {
   Logo,
@@ -18,4 +19,5 @@ export {
   IcBehance,
   BgLogo,
   IcArrow,
+  BackgroundLogo,
 };

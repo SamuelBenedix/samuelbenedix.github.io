@@ -113,6 +113,5 @@ export const styLine = css`
   left: 0;
   bottom: 0;
   transition: all 0.5s;
-  @media screen and (max-width: 1400px) {
-  }
+  z-index: 0;
 `;

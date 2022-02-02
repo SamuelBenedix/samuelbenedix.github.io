@@ -1,5 +1,5 @@
 import React from 'react';
-import { BgLogo } from '../../../assets';
+import { BackgroundLogo } from '../../../assets';
 import { Intro, ProfileIntro } from '../../molecules';
 
 import { styContent, stySection, styBackground } from './styles';
@@ -11,8 +11,9 @@ const Hero = () => {
         <Intro />
         <ProfileIntro />
       </div>
-
-      <img className={styBackground} src={BgLogo} alt="Logo" />
+      <div className={styBackground}>
+        <BackgroundLogo alt="Logo" />
+      </div>
     </section>
   );
 };

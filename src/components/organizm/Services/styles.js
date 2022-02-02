@@ -11,7 +11,6 @@ export const stySection = css`
   position: relative;
   margin-top: 20px;
   padding-bottom: 40px;
-  background-color: ${colors.primary[900]};
   @media (max-width: 480px) and (min-height: 700px) {
     padding-bottom: 10vh;
   }
@@ -24,85 +23,47 @@ export const styContent = css`
   margin-right: auto;
   margin-left: auto;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
 
   align-items: center;
 
   @media screen and (max-width: 768px) {
     padding-right: var(--bs-gutter-x, 3rem);
     padding-left: var(--bs-gutter-x, 3rem);
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
 `;
 
-export const styAbout = css`
-  width: 50%;
+export const stySectionTitle = css`
+  position: relative;
+  padding: 0 0 5px;
+
   h2 {
     font-weight: 700;
     font-size: 35px;
   }
-  a {
-    color: ${colors.primary[900]};
-    text-decoration: none;
-    font-weight: 500;
-    img {
-      transition: all 0.5s;
-    }
-    &:hover {
-      img {
-        transform: translateX(10px);
-      }
-    }
-  }
-  @media screen and (max-width: 768px) {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 
-    h2 {
-      text-align: center;
-    }
-    p {
-      text-align: center;
-    }
+  &::before {
+    width: 40px;
+    height: 2px;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    background-color: ${colors.primary[900]};
+    transform: translateX(-50%);
   }
 `;
 
-export const styWrapperCounter = css`
-  width: 15%;
+export const styServicesContainer = css`
+  margin-top: 64px;
+`;
+
+export const styServices = css`
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  text-align: center;
-  h2 {
-    font-weight: 700;
-    font-size: 80px;
-    line-height: 80px;
-  }
-  p {
-    font-size: 18px;
-    line-height: 18px;
-    text-align: center;
-  }
-  @media screen and (max-width: 768px) {
-    width: 50%;
-    margin-bottom: 20px;
-  }
-`;
-
-export const styCounter = css`
-  padding: 0 40px;
-  @media screen and (max-width: 768px) {
-    padding: 0 25px;
-  }
-`;
-
-export const styBackground = css`
-  position: absolute;
-  margin-top: 30px;
-  font-weight: 700;
-  font-size: 120px;
-  color: ${colors.light[700]};
-  margin-left: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
 `;

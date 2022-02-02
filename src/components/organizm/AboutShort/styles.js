@@ -11,6 +11,8 @@ export const stySection = css`
   position: relative;
   margin-top: 20px;
   padding-bottom: 40px;
+  margin-bottom: 40px;
+
   @media (max-width: 480px) and (min-height: 700px) {
     padding-bottom: 10vh;
   }

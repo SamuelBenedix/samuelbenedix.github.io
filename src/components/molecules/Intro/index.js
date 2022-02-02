@@ -17,7 +17,6 @@ const Intro = () => {
 
   const onScroll = () => {
     let offsetTop = btnPosition.current.getBoundingClientRect().top;
-    console.log(offsetTop);
     if (offsetTop < 50) {
       setElementPosition(true);
     }
@@ -34,8 +33,6 @@ const Intro = () => {
     };
   }, []);
 
-  console.log('element Position', elementPosition);
-
   return (
     <div>
       <p className={styIntro}>Hello, my name is</p>
@@ -47,9 +44,11 @@ const Intro = () => {
         <span className={styDot}> // </span>
         Developer
       </h3>
-      <div className={styWrapper} ref={btnPosition}>
-        <div className={styBtnPosition(elementPosition)}>
-          <Button main={true} position={elementPosition} />
+      <div className={styWrapper}>
+        <div className={styWrapper} ref={btnPosition}>
+          <div className={styBtnPosition(elementPosition)}>
+            <Button main={true} position={elementPosition} />
+          </div>
         </div>
       </div>
     </div>

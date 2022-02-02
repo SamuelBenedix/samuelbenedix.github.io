@@ -7,10 +7,6 @@ const Home = () => {
     <main className={styMain}>
       <Hero />
       <AboutShort />
-      <AboutShort />
-      <AboutShort />
-      <AboutShort />
-      <AboutShort />
       <Services />
     </main>
   );

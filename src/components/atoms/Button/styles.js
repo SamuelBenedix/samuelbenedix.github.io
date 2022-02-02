@@ -23,10 +23,11 @@ export const styContainer = (position) => css`
 
   width: ${position ? 40 : 0} 40px;
   position: ${position ? 'fixed' : 'relative'};
-  bottom: ${position ? 20 : 10}px;
+  bottom: ${position ? 'calc(100vh - 101vh)' : 'calc(100vh - 95vh)'};
+  margin-bottom: ${position && '20px'};
   right: ${position ? 30 : 10}px;
   left: ${position ? 'calc(100% - 94px)' : 0};
-  z-index: ${position && 10};
+  z-index: ${position ? 10 : 3};
 
   justify-content: center;
   align-items: center;
