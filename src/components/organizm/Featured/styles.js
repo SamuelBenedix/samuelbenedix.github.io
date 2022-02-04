@@ -46,7 +46,7 @@ export const stySectionTitle = css`
 
   &::before {
     width: 40px;
-    height: 3px;
+    height: 2px;
     content: '';
     position: absolute;
     bottom: 0;
@@ -60,7 +60,7 @@ export const styServicesContainer = css`
   margin-top: 64px;
 `;
 
-export const styServices = css`
+export const styFeatured = css`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
