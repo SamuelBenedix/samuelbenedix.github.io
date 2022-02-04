@@ -1,5 +1,5 @@
 import React from 'react';
-import { ServiceItem, FeaturedItem } from '../../molecules';
+import { FeaturedItem } from '../../molecules';
 
 import {
   stySection,

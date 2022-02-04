@@ -1,5 +1,11 @@
 import React from 'react';
-import { Hero, AboutShort, Services, Featured } from '../../components';
+import {
+  Hero,
+  AboutShort,
+  Services,
+  Featured,
+  GetInTouch,
+} from '../../components';
 import { styMain } from './styles';
 
 const Home = () => {
@@ -9,6 +15,7 @@ const Home = () => {
       <AboutShort />
       <Services />
       <Featured />
+      <GetInTouch />
     </main>
   );
 };

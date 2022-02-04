@@ -17,6 +17,7 @@ const Intro = () => {
 
   const onScroll = () => {
     let offsetTop = btnPosition.current.getBoundingClientRect().top;
+    console.log(offsetTop);
     if (offsetTop < 50) {
       setElementPosition(true);
     }
@@ -32,6 +33,8 @@ const Intro = () => {
       window.removeEventListener('scroll', onScroll);
     };
   }, []);
+
+  console.log(elementPosition);
 
   return (
     <div>

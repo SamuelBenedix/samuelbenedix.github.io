@@ -11,7 +11,6 @@ export const styContainer = (position) => css`
   letter-spacing: 1.54px;
   text-transform: uppercase;
   border-radius: 2px;
-  tex-decoration: none;
   background-color: ${position ? '#ef4b6c' : colors.primary[900]};
   border: 0;
   color: ${colors.light[900]};
@@ -19,9 +18,7 @@ export const styContainer = (position) => css`
   border-radius: ${position ? '50%' : 0};
   transform: translateZ(0);
 
-  position: ${position ? 'fixed' : 'absolute'};
-
-  width: ${position ? 40 : 0} 40px;
+  width: ${position ? 40 : 0} px;
   position: ${position ? 'fixed' : 'relative'};
   bottom: ${position ? 'calc(100vh - 101vh)' : 'calc(100vh - 95vh)'};
   margin-bottom: ${position && '20px'};
@@ -46,4 +43,33 @@ export const styIcon = (position) => css`
 export const styTitle = (position) => css`
   visibility: ${position ? 'hidden' : 'visibilty'};
   display: ${position ? 'none' : 'inline-block'};
+`;
+
+export const styContainerSecondart = css`
+  height: 50px;
+  width: 220px;
+  padding: '16px 50px';
+  font-weight: 700;
+  font-size: 0.8rem;
+  line-height: 18px;
+  letter-spacing: 1.54px;
+  text-transform: uppercase;
+  border-radius: 2px;
+  text-decoration: none;
+  background-color: ${colors.primary[900]};
+  border: 0;
+  color: ${colors.light[900]};
+  transition: all 0.5s ease-in-out;
+  border-radius: 0;
+
+  position: 'relative';
+  margin-bottom: '20px';
+
+  justify-content: center;
+  align-items: center;
+  display: 'flex';
+
+  &:hover {
+    background-color: ${colors.primary[800]};
+  }
 `;

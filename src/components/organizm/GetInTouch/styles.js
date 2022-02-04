@@ -58,12 +58,15 @@ export const stySectionTitle = css`
 
 export const styServicesContainer = css`
   margin-top: 32px;
-`;
-
-export const styFeatured = css`
+  max-width: 600px;
+  margin-bottom: 100px;
+  text-align: center;
+  font-weight: 500;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
+  align-items: center;
+  flex-direction: column;
+  p {
+    margin-bottom: 65px;
+  }
 `;

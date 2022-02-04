@@ -2,7 +2,7 @@ import React from 'react';
 import { styContainer, styIcon, styTitle } from './styles';
 import { Mail } from 'react-feather';
 
-const Button = ({ main, position }) => {
+const Button = ({ main, position, title }) => {
   if (main) {
     return (
       <button type="button" className={styContainer(position)}>
@@ -11,7 +11,11 @@ const Button = ({ main, position }) => {
       </button>
     );
   }
-  return <div>Button</div>;
+  return (
+    <button type="button" className={styContainer(position)}>
+      <p className={styTitle(position)}>Let's Talk</p>
+    </button>
+  );
 };
 
 export default Button;
