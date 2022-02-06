@@ -70,6 +70,10 @@ export const styContainerSecondary = css`
 
   box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
 
+  p {
+    margin-bottom: 0px;
+  }
+
   &:hover {
     background-color: #ef4b6c;
     opacity: 0.8;
@@ -78,5 +82,5 @@ export const styContainerSecondary = css`
 
 export const styTitleSecondary = css`
   display: inline-block;
-  margin-bottom: 0;
+  margin-bottom: 0rem;
 `;

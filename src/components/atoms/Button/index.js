@@ -25,14 +25,14 @@ const Button = ({ main, position, title, onClick, secondary }) => {
 
   if (secondary) {
     return (
-      <button type="button" className={styContainerSecondary}>
+      <button type="button" className={styContainerSecondary} onClick={onClick}>
         <p className={styTitle(position)}>{title}</p>
       </button>
     );
   }
 
   return (
-    <button type="button" className={styContainer(position)}>
+    <button type="button" className={styContainer(position)} onClick={onClick}>
       <p className={styTitle(position)}>Let's Talk</p>
     </button>
   );

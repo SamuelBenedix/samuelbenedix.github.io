@@ -1,18 +1,17 @@
 import { css } from '@emotion/css';
 import { colors } from '../../../utils';
 
-export const styBackdrop = css`
-  background: rgba(0, 0, 0, 0.8);
-  position: fixed;
-  z-index: 11;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  max-height: 100%;
-  @media screen and (max-width: 768px) {
-    overflow-y: hidden;
-  }
+export const styBackdrop = (showModal) => css`
+ visibility: ${showModal ? 'visible' : 'hidden'};
+ display:${showModal ? 'block' : 'none'}
+ transition: all 0.5s;
+ background-color: rgba(0, 0, 0, 0.6);
+ position: fixed;
+ height: 100vh;
+ width: 100%;
+ z-index: 1100;
+ top: 0;
+ right: 0;
 `;
 
 export const styModalContent = css`
@@ -21,7 +20,7 @@ export const styModalContent = css`
   overflow-y: auto;
 `;
 
-export const styWrapper = css`
+export const styWrapper = (showModal) => css`
   max-width: 742px;
   min-height: calc(100% - 2.5rem);
   box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
@@ -30,13 +29,17 @@ export const styWrapper = css`
   border-radius: 25px;
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s ease-out;
+  transition: all 0.5s ease-in-out;
+  transition-delay: 0.15s;
   overflow-x: hidden;
   overflow-y: auto;
   margin: 1.75rem auto;
   cursor: default;
   padding: 20px;
   overflow-y: auto;
+
+  top: ${showModal ? 0 : '-800px'};
+  opacity: ${showModal ? 1 : 0};
 
   @media screen and (max-width: 768px) {
     margin: 0 auto;

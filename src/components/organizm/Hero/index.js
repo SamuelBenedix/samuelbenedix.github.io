@@ -4,12 +4,12 @@ import { Intro, ProfileIntro } from '../../molecules';
 
 import { styContent, stySection, styBackground } from './styles';
 
-const Hero = () => {
+const Hero = ({ onClick }) => {
   return (
     <React.Fragment>
       <section className={stySection}>
         <div className={styContent}>
-          <Intro />
+          <Intro onClick={onClick} />
           <ProfileIntro />
         </div>
         <div className={styBackground}>

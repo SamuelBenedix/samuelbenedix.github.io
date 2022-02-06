@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 import React, { useEffect, useState, useRef } from 'react';
-import { Button, Modal } from '../../atoms';
+import { Button } from '../../atoms';
 import {
   styIntro,
   styName,
@@ -10,9 +10,8 @@ import {
   styWrapper,
 } from './styles';
 
-const Intro = () => {
+const Intro = ({ onClick }) => {
   const [elementPosition, setElementPosition] = useState();
-  const [showModal, setShowModal] = useState(false);
 
   const btnPosition = useRef();
 
@@ -35,10 +34,6 @@ const Intro = () => {
     };
   }, []);
 
-  const openModal = () => {
-    setShowModal((prev) => !prev);
-  };
-
   return (
     <div>
       <p className={styIntro}>Hello, my name is</p>
@@ -53,15 +48,10 @@ const Intro = () => {
       <div className={styWrapper}>
         <div className={styWrapper} ref={btnPosition}>
           <div className={styBtnPosition(elementPosition)}>
-            <Button
-              main={true}
-              position={elementPosition}
-              onClick={openModal}
-            />
+            <Button main={true} position={elementPosition} onClick={onClick} />
           </div>
         </div>
       </div>
-      <Modal setShowModal={setShowModal} showModal={showModal} />
     </div>
   );
 };

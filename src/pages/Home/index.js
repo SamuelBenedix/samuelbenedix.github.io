@@ -1,21 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Hero,
   AboutShort,
   Services,
   Featured,
   GetInTouch,
+  Modal,
 } from '../../components';
 import { styMain } from './styles';
 
 const Home = () => {
+  const [showModal, setShowModal] = useState(false);
+
+  const openModal = () => {
+    setShowModal((prev) => !prev);
+  };
+
   return (
     <main className={styMain}>
-      <Hero />
+      <Hero onClick={openModal} />
       <AboutShort />
       <Services />
       <Featured />
-      <GetInTouch />
+      <GetInTouch onClick={openModal} />
+      <Modal setShowModal={setShowModal} showModal={showModal} />
     </main>
   );
 };
