@@ -1,8 +1,13 @@
 import React from 'react';
-import { styContainer, styIcon, styTitle } from './styles';
+import {
+  styContainer,
+  styIcon,
+  styTitle,
+  styContainerSecondary,
+} from './styles';
 import { Mail } from 'react-feather';
 
-const Button = ({ main, position, title, onClick }) => {
+const Button = ({ main, position, title, onClick, secondary }) => {
   if (main) {
     return (
       <React.Fragment>
@@ -17,6 +22,15 @@ const Button = ({ main, position, title, onClick }) => {
       </React.Fragment>
     );
   }
+
+  if (secondary) {
+    return (
+      <button type="button" className={styContainerSecondary}>
+        <p className={styTitle(position)}>{title}</p>
+      </button>
+    );
+  }
+
   return (
     <button type="button" className={styContainer(position)}>
       <p className={styTitle(position)}>Let's Talk</p>

@@ -10,11 +10,15 @@ export const styBackdrop = css`
   bottom: 0;
   right: 0;
   max-height: 100%;
+  @media screen and (max-width: 768px) {
+    overflow-y: hidden;
+  }
 `;
 
 export const styModalContent = css`
   width: 100%;
   height: 100%;
+  overflow-y: auto;
 `;
 
 export const styWrapper = css`
@@ -32,11 +36,14 @@ export const styWrapper = css`
   margin: 1.75rem auto;
   cursor: default;
   padding: 20px;
+  overflow-y: auto;
 
   @media screen and (max-width: 768px) {
     margin: 0 auto;
     height: 100%;
     overflow-y: hidden;
+    border-radius: 0;
+    overflow-y: auto;
   }
 
   @media (min-width: 576px) {
@@ -75,4 +82,8 @@ export const styContent = css`
     max-width: 70%;
     text-align: center;
   }
+`;
+
+export const styBtnWrapper = css`
+  margin: 20px auto 10px;
 `;

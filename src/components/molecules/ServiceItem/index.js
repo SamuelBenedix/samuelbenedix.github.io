@@ -13,11 +13,11 @@ const ServiceItem = ({ title, desc }) => {
   const Icon = () => {
     switch (title) {
       case 'Web Development':
-        return <Code color="#fff" stroke-width="3" size={30} />;
+        return <Code color="#fff" strokeWidth="3" size={30} />;
       case 'Mobile Application':
-        return <Smartphone color="#fff" stroke-width="2" size={30} />;
+        return <Smartphone color="#fff" strokeWidth="2" size={30} />;
       case 'UI/UX':
-        return <Image color="#fff" stroke-width="2" size={30} />;
+        return <Image color="#fff" strokeWidth="2" size={30} />;
 
       default:
         break;

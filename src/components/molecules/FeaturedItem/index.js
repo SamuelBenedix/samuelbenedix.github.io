@@ -25,7 +25,7 @@ const FeaturedItem = () => {
             src="https://mir-s3-cdn-cf.behance.net/projects/404/96715a94823367.5e8869f748f94.png"
             alt="Laundry Guide | Outline Icon Set"
             loading="lazy"
-            class={styImage}
+            className={styImage}
             draggable="false"
           />
         </div>

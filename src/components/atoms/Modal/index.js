@@ -5,8 +5,11 @@ import {
   styModalClose,
   styModalContent,
   styContent,
+  styBtnWrapper,
 } from './styles';
 import { FiX } from 'react-icons/fi';
+import Input from '../Input';
+import Button from '../Button';
 
 const Modal = ({ showModal, setShowModal }) => {
   return (
@@ -20,26 +23,27 @@ const Modal = ({ showModal, setShowModal }) => {
                   onClick={(prev) => {
                     setShowModal(!prev);
                   }}
-                  size={35}
-                  color="#000"
+                  size={30}
+                  color="#212529"
                   alt="Close"
                 />
               </div>
 
-              <form className={styContent}>
+              <div className={styContent}>
                 <h1>Let's Talk</h1>
                 <p>
                   We will get back to you within one to two days through email.
                   Also please don't forget to check your spam account just in
                   case!
                 </p>
-                <div>
-                  <div>Name*</div>
-                  <div>
-                    <input />
-                  </div>
-                </div>
-              </form>
+                <Input label="Name" />
+                <Input label="Email" />
+                <Input label="Subject" />
+                <Input inputArea={true} label="Message" />
+              </div>
+              <div className={styBtnWrapper}>
+                <Button secondary={true} title="Send Request" />
+              </div>
             </form>
           </div>
         </div>
