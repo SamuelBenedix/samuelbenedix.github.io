@@ -57,7 +57,7 @@ export const stySectionTitle = css`
 `;
 
 export const styServicesContainer = css`
-  margin-top: 32px;
+  margin-top: 64px;
 `;
 
 export const styServices = css`

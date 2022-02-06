@@ -50,10 +50,3 @@ export const styBtnPosition = (position = false) => css`
     left: 24%;
   }
 `;
-
-// width: ${position ? 40 : 0} 40px;
-// position: ${position ? 'fixed' : 'relative'};
-// bottom: ${position && 20}px;
-// right: ${position && 130}px;
-// left: ${position && 'auto'};
-// z-index: ${position && 10};

@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { IcClose, IcHamburger, Logo } from '../../../assets';
+import { FiMenu, FiX } from 'react-icons/fi';
+import { Logo } from '../../../assets';
 import {
   styMainMenu,
   styNavbarWrapper,
@@ -72,18 +73,20 @@ const Navbar = () => {
               setToggle(!toggle);
             }}
             type="button"
+            alt="Menu"
           >
-            <img src={IcHamburger} alt="Menu" />
+            <FiMenu size={35} color="#000" />
           </button>
           <div className={styLinkWrapper(toggle)} ref={navElement}>
             <ul className={styNavLinks(toggle)}>
-              <img
+              <FiX
+                size={35}
+                color="#000"
                 className={styCloseSidebar}
                 onClick={() => {
                   setToggle(!toggle);
                 }}
-                src={IcClose}
-                alt="Menu"
+                alt="Close"
               />
               <li className={styNavLink}>
                 <Link

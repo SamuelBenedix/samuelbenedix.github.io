@@ -46,12 +46,13 @@ export const styAbout = css`
     color: ${colors.primary[900]};
     text-decoration: none;
     font-weight: 500;
-    img {
+    svg {
+      margin-left: 5px;
       transition: all 0.5s;
     }
     &:hover {
-      img {
-        transform: translateX(10px);
+      svg {
+        transform: translateX(15px);
       }
     }
   }

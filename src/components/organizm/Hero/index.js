@@ -6,15 +6,17 @@ import { styContent, stySection, styBackground } from './styles';
 
 const Hero = () => {
   return (
-    <section className={stySection}>
-      <div className={styContent}>
-        <Intro />
-        <ProfileIntro />
-      </div>
-      <div className={styBackground}>
-        <BackgroundLogo alt="Logo" />
-      </div>
-    </section>
+    <React.Fragment>
+      <section className={stySection}>
+        <div className={styContent}>
+          <Intro />
+          <ProfileIntro />
+        </div>
+        <div className={styBackground}>
+          <BackgroundLogo alt="Logo" />
+        </div>
+      </section>
+    </React.Fragment>
   );
 };
 

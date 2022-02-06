@@ -24,7 +24,7 @@ export const styContainer = (position) => css`
   margin-bottom: ${position && '20px'};
   right: ${position ? 30 : 10}px;
   left: ${position ? 'calc(100% - 94px)' : 0};
-  z-index: ${position ? 10 : 3};
+  z-index: ${position ? 9 : 3};
 
   justify-content: center;
   align-items: center;
