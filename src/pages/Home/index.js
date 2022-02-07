@@ -8,6 +8,7 @@ import {
   Modal,
 } from '../../components';
 import { styMain } from './styles';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 const Home = () => {
   const [showModal, setShowModal] = useState(false);
@@ -19,7 +20,9 @@ const Home = () => {
   return (
     <main className={styMain}>
       <Hero onClick={openModal} />
-      <AboutShort />
+      <ScrollAnimation animateIn="fadeIn">
+        <AboutShort />
+      </ScrollAnimation>
       <Services />
       <Featured />
       <GetInTouch onClick={openModal} />

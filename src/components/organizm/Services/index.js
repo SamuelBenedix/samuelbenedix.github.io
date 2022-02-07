@@ -16,7 +16,6 @@ const Services = () => {
         <div className={stySectionTitle}>
           <h2>My Services</h2>
         </div>
-
         <div className={styServicesContainer}>
           <div className={styServices}>
             <ServiceItem

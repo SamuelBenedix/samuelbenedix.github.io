@@ -44,12 +44,11 @@ export const styList = css`
     }
   }
   &:hover {
+    color: #ef4b6c;
     transform: translateY(-15px);
     svg {
+      color: #ef4b6c;
       stroke: #ef4b6c;
-      path {
-        stroke: #ef4b6c;
-      }
     }
   }
 `;

@@ -8,6 +8,7 @@ import IcBehance from './behance.js';
 import BgLogo from './bg-logo.svg';
 import IcArrow from './arrow.svg';
 import BackgroundLogo from './bg-logo';
+import LogoSam from './LogoSam';
 
 export {
   Logo,
@@ -20,4 +21,5 @@ export {
   BgLogo,
   IcArrow,
   BackgroundLogo,
+  LogoSam,
 };

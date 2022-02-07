@@ -21,8 +21,8 @@ export const styModalContent = css`
 `;
 
 export const styWrapper = (showModal) => css`
-  max-width: 742px;
-  min-height: calc(100% - 2.5rem);
+  max-width: 600px;
+  min-height: calc(100% - 4.5rem);
   box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
   background: #fff;
   position: relative;
@@ -43,6 +43,7 @@ export const styWrapper = (showModal) => css`
 
   @media screen and (max-width: 768px) {
     margin: 0 auto;
+    width: 100%;
     height: 100%;
     overflow-y: hidden;
     border-radius: 0;
@@ -78,7 +79,7 @@ export const styContent = css`
     line-height: 1.2;
   }
   p {
-    margin: 9px 0 20px;
+    margin: 9px 0 10px;
     font-size: 12px;
     line-height: 2;
     color: #757c98;
@@ -89,4 +90,48 @@ export const styContent = css`
 
 export const styBtnWrapper = css`
   margin: 20px auto 10px;
+`;
+
+export const styToolTip = css`
+  position: relative;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+`;
+
+export const styClipBoard = (copy) => css`
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: all 0.5s ease-in-out;
+  transition-delay: 0.15s;
+
+  svg {
+    transition: all 0.5s ease-in-out;
+    transition-delay: 0.15s;
+    margin-left: 7px;
+  }
+
+  opacity: ${copy ? '0' : '1'};
+  &:hover {
+    color: ${colors.primary[900]};
+    svg {
+      stroke: ${colors.primary[900]};
+    }
+  }
+`;
+
+export const styToolTipName = (copy) => css`
+  position: absolute;
+  top: ${copy ? '0px' : '-50px'};
+  opacity: ${copy ? 1 : 0};
+  transition: all 0.5s ease-in-out;
+  transition-delay: 0.15s;
+  color: ${copy ? colors.status.success : '#000'};
+  cursor: default;
+  svg {
+    transition: all 0.5s ease-in-out;
+    transition-delay: 0.15s;
+    margin-left: 7px;
+    stroke: ${copy ? colors.status.success : '#000'};
+  }
 `;

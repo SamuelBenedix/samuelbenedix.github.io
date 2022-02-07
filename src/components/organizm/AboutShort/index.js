@@ -17,7 +17,11 @@ const AboutShort = () => {
       <div className={styContent}>
         <div className={styAbout}>
           <h2>About Me</h2>
-          <p>I'm an independent creative developer from Jakarta, Indonesia</p>
+          <p>
+            I'm a passionate person who has a high entusiasm for learning
+            especialy about technology. Mostly working with target, and strive
+            for achievement.
+          </p>
           <Link to="/about">
             Read more
             <FiArrowRight alt="Arrow" size={18} color="rgba(0, 136, 255, 1)" />

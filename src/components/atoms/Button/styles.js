@@ -31,7 +31,9 @@ export const styContainer = (position) => css`
   display: ${position && 'flex'};
 
   &:hover {
-    background-color: ${colors.primary[800]};
+    background-color: ${position
+      ? 'rgba(239, 75, 108,.8)'
+      : colors.primary[800]};
   }
 `;
 

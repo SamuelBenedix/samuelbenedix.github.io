@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   styBackdrop,
   styWrapper,
@@ -6,12 +6,18 @@ import {
   styModalContent,
   styContent,
   styBtnWrapper,
+  styClipBoard,
+  styToolTip,
+  styToolTipName,
 } from './styles';
-import { FiX } from 'react-icons/fi';
+import { FiX, FiCopy, FiCheck } from 'react-icons/fi';
 import Input from '../Input';
 import Button from '../Button';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 const Modal = ({ showModal, setShowModal }) => {
+  const [copied, setCopied] = useState(false);
+
   useEffect(() => {
     if (showModal) {
       document.body.style.overflow = 'hidden';
@@ -21,6 +27,13 @@ const Modal = ({ showModal, setShowModal }) => {
       document.body.style.overflow = 'scroll';
     }
   }, [showModal]);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setCopied(false), 1500);
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [copied]);
 
   return (
     <React.Fragment>
@@ -45,6 +58,21 @@ const Modal = ({ showModal, setShowModal }) => {
                 Also please don't forget to check your spam account just in
                 case!
               </p>
+              <CopyToClipboard
+                text="samuelbenedictx@gmail.com"
+                onCopy={() => setCopied(true)}
+              >
+                <div className={styToolTip}>
+                  <span className={styToolTipName(copied)}>
+                    Copied to Clipboard
+                    <FiCheck size={15} color="#212529" alt="Done" />
+                  </span>
+                  <span className={styClipBoard(copied)}>
+                    samuelbenedictx@gmail.com
+                    <FiCopy size={15} color="#212529" alt="Clipboard" />
+                  </span>
+                </div>
+              </CopyToClipboard>
               <Input label="Name" />
               <Input label="Email" />
               <Input label="Subject" />

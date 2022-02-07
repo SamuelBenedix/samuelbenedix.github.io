@@ -9,6 +9,8 @@ import {
   styIconCircle,
 } from './styles';
 
+import ScrollAnimation from 'react-animate-on-scroll';
+
 const ServiceItem = ({ title, desc }) => {
   const Icon = () => {
     switch (title) {
@@ -26,17 +28,19 @@ const ServiceItem = ({ title, desc }) => {
 
   return (
     <div className={styServicesItem}>
-      <div className={styWrapper}>
-        <div className={styIcon}>
-          <div className={styIconCircle}>
-            <Icon />
+      <ScrollAnimation animateIn="rubberBand">
+        <div className={styWrapper}>
+          <div className={styIcon}>
+            <div className={styIconCircle}>
+              <Icon />
+            </div>
+          </div>
+          <div className={styText}>
+            <h3>{title}</h3>
+            <p>{desc}</p>
           </div>
         </div>
-        <div className={styText}>
-          <h3>{title}</h3>
-          <p>{desc}</p>
-        </div>
-      </div>
+      </ScrollAnimation>
     </div>
   );
 };

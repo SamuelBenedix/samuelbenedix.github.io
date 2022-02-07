@@ -1,6 +1,6 @@
 import React from 'react';
-import { IcBehance } from '../../../assets';
 import { FiInstagram, FiLinkedin, FiGithub, FiDribbble } from 'react-icons/fi';
+import { FaBehance } from 'react-icons/fa';
 
 import { styContainerSocmed, stySocmedList, styList } from './styles';
 
@@ -35,7 +35,7 @@ const Socmed = () => {
             href="https://www.behance.net/samuelben"
             rel="noreferrer"
           >
-            <IcBehance />
+            <FaBehance size={24} />
           </a>
         </li>
         <li className={styList}>

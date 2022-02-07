@@ -5,6 +5,7 @@ export const styMainMenu = css`
   width: 100%;
   position: absolute;
   z-index: 10;
+  top: 0;
 `;
 
 export const styNavbarWrapper = css`
