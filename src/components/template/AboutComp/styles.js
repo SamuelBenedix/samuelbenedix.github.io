@@ -115,6 +115,8 @@ export const stySectionAbout = css`
   h3 {
     font-weight: 700;
     font-size: 32px;
+    transition: all 2s;
+    position: relative;
   }
 
   @media screen and (max-width: 1024px) {

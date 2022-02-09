@@ -41,7 +41,7 @@ const AboutComp = () => {
             </p>
             <p>Here are a few technologies I’ve been working with recently:</p>
             <div>
-              <ul class={styInfo}>
+              <ul className={styInfo}>
                 <li>
                   <label>
                     <FiChevronRight />

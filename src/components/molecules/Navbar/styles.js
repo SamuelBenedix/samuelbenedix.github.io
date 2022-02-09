@@ -60,7 +60,8 @@ export const styLinkWrapper = (toggle) => css`
     visibility: ${toggle ? 'visible' : 'hidden'};
     display:${toggle ? 'block' : 'none'}
     transition: all 0.5s;
-    background-color: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter:blur(3px);
     position: fixed;
     height: 100vh;
     width: 100%;

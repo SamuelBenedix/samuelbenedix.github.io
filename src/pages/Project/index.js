@@ -1,9 +1,10 @@
 import React from 'react';
+import { FeatureComp } from '../../components';
 
 const Project = () => {
   return (
     <React.Fragment>
-      <div>Project Page</div>
+      <FeatureComp />
     </React.Fragment>
   );
 };

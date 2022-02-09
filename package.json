@@ -24,6 +24,7 @@
     "react-scripts": "5.0.0",
     "react-scroll": "^1.8.4",
     "react-spring": "^9.4.2",
+    "react-transition-group": "^4.4.2",
     "web-vitals": "^2.1.0"
   },
   "scripts": {
