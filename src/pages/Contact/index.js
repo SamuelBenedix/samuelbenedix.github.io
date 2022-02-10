@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { ContactComp, Modal } from '../../components';
 
 const Contact = () => {
+  const [showModal, setShowModal] = useState(false);
+
+  const openModal = () => {
+    setShowModal((prev) => !prev);
+  };
+
   return (
     <div>
-      <div>Contact Page</div>
+      <ContactComp onClick={openModal} />
+      <Modal setShowModal={setShowModal} showModal={showModal} />
     </div>
   );
 };

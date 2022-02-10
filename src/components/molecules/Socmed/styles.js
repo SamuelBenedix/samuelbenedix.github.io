@@ -8,7 +8,7 @@ export const styContainerSocmed = css`
   left: 50px;
   right: auto;
   z-index: 10;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     display: none;
   }
 `;

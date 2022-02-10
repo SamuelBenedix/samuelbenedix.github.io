@@ -86,3 +86,40 @@ export const styTitleSecondary = css`
   display: inline-block;
   margin-bottom: 0rem;
 `;
+
+export const styMail = css`
+  height: 64px;
+  width: 64px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  line-height: 0px;
+  letter-spacing: 1.54px;
+  text-transform: uppercase;
+  border-radius: 2px;
+  background-color: #ef4b6c;
+  border: 0;
+  color: ${colors.light[900]};
+  transition: all 0.5s ease-in-out;
+  border-radius: 50%;
+  transform: translateZ(0);
+
+  position: fixed;
+  bottom: calc(100vh - 101vh);
+  margin-bottom: 20px;
+  right: 30px;
+  left: calc(100% - 94px);
+  z-index: 9;
+
+  justify-content: center;
+  align-items: center;
+  display: flex;
+
+  &:hover {
+    background-color: rgba(239, 75, 108, 0.8);
+  }
+`;
+
+export const styMailText = css`
+  visibility: visibilty;
+  display: block;
+`;

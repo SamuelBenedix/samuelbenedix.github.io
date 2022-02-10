@@ -1,8 +1,19 @@
-import React from 'react';
-import { AboutComp } from '../../components';
+import React, { useState } from 'react';
+import { AboutComp, Modal } from '../../components';
 
 const About = () => {
-  return <AboutComp />;
+  const [showModal, setShowModal] = useState(false);
+
+  const openModal = () => {
+    setShowModal((prev) => !prev);
+  };
+
+  return (
+    <div>
+      <AboutComp onClick={openModal} />
+      <Modal setShowModal={setShowModal} showModal={showModal} />
+    </div>
+  );
 };
 
 export default About;

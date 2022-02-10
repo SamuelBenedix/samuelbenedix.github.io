@@ -4,10 +4,19 @@ import {
   styIcon,
   styTitle,
   styContainerSecondary,
+  styMail,
+  styMailText,
 } from './styles';
 import { Mail } from 'react-feather';
 
-const Button = ({ main, position, title, onClick, secondary }) => {
+const Button = ({
+  main,
+  position,
+  title = "Let's Talk",
+  onClick,
+  secondary,
+  mail,
+}) => {
   if (main) {
     return (
       <React.Fragment>
@@ -31,9 +40,17 @@ const Button = ({ main, position, title, onClick, secondary }) => {
     );
   }
 
+  if (mail) {
+    return (
+      <button type="button" className={styMail} onClick={onClick}>
+        <Mail className={styMailText} color="#fff" size={30} />
+      </button>
+    );
+  }
+
   return (
     <button type="button" className={styContainer(position)} onClick={onClick}>
-      <p className={styTitle(position)}>Let's Talk</p>
+      <p className={styTitle(position)}>{title}</p>
     </button>
   );
 };

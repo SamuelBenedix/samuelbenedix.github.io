@@ -29,8 +29,8 @@ export const styContent = css`
   align-items: center;
 
   @media screen and (max-width: 768px) {
-    padding-right: var(--bs-gutter-x, 3rem);
-    padding-left: var(--bs-gutter-x, 3rem);
+    padding-right: 0;
+    padding-left: 0;
     flex-direction: column;
   }
 `;
@@ -64,6 +64,4 @@ export const styFeatured = css`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
 `;

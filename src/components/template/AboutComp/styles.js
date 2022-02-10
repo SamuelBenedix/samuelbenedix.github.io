@@ -10,7 +10,6 @@ export const stySection = css`
   height: 100%;
   padding-top: 0px;
   position: relative;
-  margin-bottom: 50px;
   overflow: hidden;
   @media (max-width: 480px) and (min-height: 700px) {
     padding-bottom: 10vh;

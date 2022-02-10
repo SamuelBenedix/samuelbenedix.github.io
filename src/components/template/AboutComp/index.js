@@ -11,9 +11,10 @@ import {
   styProfileName,
   styInfo,
 } from './styles';
+import { Button } from '../../atoms';
 import { FiChevronRight } from 'react-icons/fi';
 
-const AboutComp = () => {
+const AboutComp = ({ onClick }) => {
   return (
     <section className={stySection}>
       <div className={styContent}>
@@ -87,6 +88,7 @@ const AboutComp = () => {
       <div className={styBackground}>
         <BackgroundLogo alt="Logo" />
       </div>
+      <Button mail onClick={onClick} />
     </section>
   );
 };

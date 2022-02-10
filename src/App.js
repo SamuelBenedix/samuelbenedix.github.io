@@ -6,9 +6,9 @@ import 'animate.css/animate.min.css';
 function App() {
   return (
     <Router>
+      <Routes />
       <Navbar />
       <Socmed />
-      <Routes />
     </Router>
   );
 }
