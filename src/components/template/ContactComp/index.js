@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { BackgroundLogo } from '../../../assets';
 import {
   styContent,
   stySection,
-  styBackground,
   styContactInfo,
   styContactForm,
   styClipBoard,
@@ -76,10 +74,6 @@ const ContactComp = () => {
         <h5>
           <FiArrowLeft /> My Social Media
         </h5>
-      </div>
-
-      <div className={styBackground}>
-        <BackgroundLogo alt="Logo" />
       </div>
     </section>
   );

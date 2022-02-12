@@ -26,10 +26,3 @@ export const styContent = css`
     margin-top: 30px;
   }
 `;
-
-export const styBackground = css`
-  position: absolute;
-  margin-top: 84px;
-  top: 0;
-  z-index: -1;
-`;

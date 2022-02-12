@@ -1,8 +1,7 @@
 import React from 'react';
 import { Featured } from '../../organizm';
-import { styContent, stySection, styBackground } from './styles';
+import { styContent, stySection } from './styles';
 import { Button } from '../../atoms';
-import { BackgroundLogo } from '../../../assets';
 
 const FeatureComp = ({ onClick }) => {
   return (
@@ -10,9 +9,7 @@ const FeatureComp = ({ onClick }) => {
       <div className={styContent}>
         <Featured />
       </div>
-      <div className={styBackground}>
-        <BackgroundLogo alt="Logo" />
-      </div>
+
       <Button mail onClick={onClick} />
     </section>
   );

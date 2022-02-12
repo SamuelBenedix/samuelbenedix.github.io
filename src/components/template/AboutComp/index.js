@@ -1,10 +1,9 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 import React from 'react';
-import { BackgroundLogo, PictProfile } from '../../../assets';
+import { PictProfile } from '../../../assets';
 import {
   styContent,
   stySection,
-  styBackground,
   styProfilePict,
   stySectionAbout,
   styProfileWrapper,
@@ -85,9 +84,6 @@ const AboutComp = ({ onClick }) => {
         </div>
       </div>
 
-      <div className={styBackground}>
-        <BackgroundLogo alt="Logo" />
-      </div>
       <Button mail onClick={onClick} />
     </section>
   );

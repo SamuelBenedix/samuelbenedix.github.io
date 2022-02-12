@@ -41,9 +41,3 @@ export const styContent = css`
     flex-direction: column-reverse;
   }
 `;
-
-export const styBackground = css`
-  position: absolute;
-  margin-top: 30px;
-  z-index: 0;
-`;
