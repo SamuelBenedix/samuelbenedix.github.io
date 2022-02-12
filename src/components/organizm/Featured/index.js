@@ -9,6 +9,8 @@ import {
   styServicesContainer,
 } from './styles';
 
+import { ProjectJson } from '../../../assets';
+
 const Featured = () => {
   return (
     <section className={stySection}>
@@ -19,12 +21,9 @@ const Featured = () => {
 
         <div className={styServicesContainer}>
           <div className={styFeatured}>
-            <FeaturedItem />
-            <FeaturedItem />
-            <FeaturedItem />
-            <FeaturedItem />
-            <FeaturedItem />
-            <FeaturedItem />
+            {ProjectJson.data.map((item) => (
+              <FeaturedItem key={item.id} item={item} />
+            ))}
           </div>
         </div>
       </div>
