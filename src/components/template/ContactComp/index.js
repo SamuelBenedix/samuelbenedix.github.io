@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import {
   styContent,
   stySection,
@@ -14,9 +14,52 @@ import { FiCopy, FiCheck, FiPhone, FiArrowLeft } from 'react-icons/fi';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { IoLocationOutline } from 'react-icons/io5';
 import { Button, Input } from '../../atoms';
+import { useForm } from '../../../utils';
+import emailjs from '@emailjs/browser';
 
 const ContactComp = () => {
   const [copied, setCopied] = useState(false);
+  const [disabled, setDisabled] = useState(true);
+  const formRef = useRef();
+
+  const [form, setForm] = useForm({
+    name: '',
+    subject: '',
+    email: '',
+    message: '',
+  });
+
+  const [message, setMessage] = useForm({
+    errorName: '',
+    errorSubject: '',
+    errorEmail: '',
+    errorMessage: '',
+  });
+
+  useEffect(() => {
+    if (
+      form.name.length > 0 &&
+      form.subject.length > 0 &&
+      form.email.length &&
+      form.message.length > 0
+    ) {
+      setDisabled(false);
+    } else {
+      setDisabled(true);
+    }
+  }, [form]);
+
+  function isEmail(val) {
+    const emailRegex = /\S+@\S+\.\S+/;
+
+    if (emailRegex.test(val)) {
+      setMessage('errorEmail', '');
+      return true;
+    } else {
+      setMessage('errorEmail', 'Please enter a valid email!');
+      return false;
+    }
+  }
 
   useEffect(() => {
     const timer = setTimeout(() => setCopied(false), 1500);
@@ -24,6 +67,30 @@ const ContactComp = () => {
       clearTimeout(timer);
     };
   }, [copied]);
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+
+    if (isEmail(form.email)) {
+      console.log(formRef.current);
+      emailjs
+        .sendForm(
+          'gmail',
+          'portofolio_template',
+          formRef.current,
+          'user_it9YxYoR0VTpq4zLL2mcw'
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+            setForm('reset');
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
+    }
+  };
 
   return (
     <section className={stySection}>
@@ -58,16 +125,47 @@ const ContactComp = () => {
             </ul>
           </div>
         </div>
-        <div className={styContactForm}>
+        <form ref={formRef} className={styContactForm} onSubmit={onSubmit}>
           <h2>Send a Message</h2>
-          <Input label="Name" />
-          <Input label="Email" />
-          <Input label="Subject" />
-          <Input inputArea={true} label="Message" />
+          <Input
+            label="Name"
+            value={form.name}
+            onChange={(e) => {
+              console.log(e.target.value);
+              setForm('name', e.target.value);
+            }}
+            required
+          />
+          <Input
+            label="Email"
+            value={form.email}
+            onChange={(e) => {
+              setForm('email', e.target.value);
+            }}
+            required
+            error={message.errorEmail}
+          />
+          <Input
+            label="Subject"
+            value={form.subject}
+            onChange={(e) => {
+              setForm('subject', e.target.value);
+            }}
+            required
+          />
+          <Input
+            inputArea={true}
+            label="Message"
+            value={form.message}
+            onChange={(e) => {
+              setForm('message', e.target.value);
+            }}
+            required
+          />
           <div className={styBtnWrapper}>
-            <Button title="Send" />
+            <Button title="Send" type="submit" disabled={disabled} />
           </div>
-        </div>
+        </form>
       </div>
 
       <div className={stySocialMedia}>

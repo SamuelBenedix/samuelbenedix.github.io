@@ -1,6 +1,7 @@
 import React from 'react';
 import {
   styContainer,
+  styContainerDisabled,
   styIcon,
   styTitle,
   styContainerSecondary,
@@ -16,12 +17,27 @@ const Button = ({
   onClick,
   secondary,
   mail,
+  type = 'button',
+  disabled,
 }) => {
+  if (disabled) {
+    return (
+      <button
+        type={type}
+        className={styContainerDisabled}
+        onClick={onClick}
+        disabled
+      >
+        <p className={styTitle(position)}>{title}</p>
+      </button>
+    );
+  }
+
   if (main) {
     return (
       <React.Fragment>
         <button
-          type="button"
+          type={type}
           onClick={onClick}
           className={styContainer(position)}
         >
@@ -34,7 +50,7 @@ const Button = ({
 
   if (secondary) {
     return (
-      <button type="button" className={styContainerSecondary} onClick={onClick}>
+      <button type={type} className={styContainerSecondary} onClick={onClick}>
         <p className={styTitle(position)}>{title}</p>
       </button>
     );
@@ -42,14 +58,14 @@ const Button = ({
 
   if (mail) {
     return (
-      <button type="button" className={styMail} onClick={onClick}>
+      <button type={type} className={styMail} onClick={onClick}>
         <Mail className={styMailText} color="#fff" size={30} />
       </button>
     );
   }
 
   return (
-    <button type="button" className={styContainer(position)} onClick={onClick}>
+    <button type={type} className={styContainer(position)} onClick={onClick}>
       <p className={styTitle(position)}>{title}</p>
     </button>
   );

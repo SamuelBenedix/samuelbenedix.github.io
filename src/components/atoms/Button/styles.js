@@ -37,6 +37,28 @@ export const styContainer = (position) => css`
   }
 `;
 
+export const styContainerDisabled = css`
+  height: 50px;
+  width: 220px;
+  padding: 16px 50px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  line-height: 18px;
+  letter-spacing: 1.54px;
+  text-transform: uppercase;
+  border-radius: 2px;
+  background-color: ${colors.primary[500]};
+  border: 0;
+  color: ${colors.light[900]};
+  transition: all 0.5s ease-in-out;
+  transform: translateZ(0);
+
+  position: relative;
+
+  justify-content: center;
+  align-items: center;
+`;
+
 export const styIcon = (position) => css`
   visibility: ${position ? 'visibilty' : 'hidden'};
   display: ${position ? 'block' : 'none'};

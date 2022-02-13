@@ -29,6 +29,8 @@ export const styLabel = (focus) => css`
 
 export const styIndicator = css`
   display: inline;
+  color: #ef4b6c;
+  margin-left: 1px;
 `;
 
 export const styContainer = css`
@@ -88,4 +90,12 @@ export const styTextArea = (focus) => css`
   resize: none;
   outline: none;
   cursor: text;
+`;
+
+export const styError = (error) => css`
+  display: inline;
+  color: #ef4b6c;
+  margin-left: 1px;
+  line-height: 0px;
+  font-size: 12px;
 `;

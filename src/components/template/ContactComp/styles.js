@@ -44,7 +44,7 @@ export const styContent = css`
   background-color: #fff;
   z-index: 1;
   min-width: 1000px;
-  min-height: 550px;
+  min-height: 650px;
   margin-top: 30px;
   display: flex;
   box-shadow: 25px 25px 50px ${colors.primary[200]},
