@@ -69,7 +69,7 @@ export const styTitle = (position) => css`
   display: ${position ? 'none' : 'inline-block'};
 `;
 
-export const styContainerSecondary = css`
+export const styContainerSecondary = (disabled) => css`
   height: 50px;
   width: 220px;
   padding: 10px 20px;
@@ -80,7 +80,7 @@ export const styContainerSecondary = css`
   text-transform: uppercase;
   border-radius: 2px;
   text-decoration: none;
-  background-color: #ef4b6c;
+  background-color: ${disabled ? colors.third[700] : colors.third[900]};
   border: 0;
   color: ${colors.light[900]};
   transition: all 0.5s ease-in-out;
@@ -99,8 +99,7 @@ export const styContainerSecondary = css`
   }
 
   &:hover {
-    background-color: #ef4b6c;
-    opacity: 0.8;
+    background-color: ${disabled ? colors.third[700] : colors.third[700]};
   }
 `;
 

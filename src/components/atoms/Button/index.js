@@ -20,6 +20,14 @@ const Button = ({
   type = 'button',
   disabled,
 }) => {
+  if (secondary) {
+    return (
+      <button type={type} className={styContainerSecondary(disabled)} onClick={onClick}>
+        <p className={styTitle(position)}>{title}</p>
+      </button>
+    );
+  }
+
   if (disabled) {
     return (
       <button
@@ -45,14 +53,6 @@ const Button = ({
           <p className={styTitle(position)}>Let's Talk</p>
         </button>
       </React.Fragment>
-    );
-  }
-
-  if (secondary) {
-    return (
-      <button type={type} className={styContainerSecondary} onClick={onClick}>
-        <p className={styTitle(position)}>{title}</p>
-      </button>
     );
   }
 

@@ -72,7 +72,6 @@ const ContactComp = () => {
     e.preventDefault();
 
     if (isEmail(form.email)) {
-      console.log(formRef.current);
       emailjs
         .sendForm(
           'gmail',
@@ -131,7 +130,6 @@ const ContactComp = () => {
             label="Name"
             value={form.name}
             onChange={(e) => {
-              console.log(e.target.value);
               setForm('name', e.target.value);
             }}
             required

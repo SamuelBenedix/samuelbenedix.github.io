@@ -21,11 +21,13 @@
     "react-dom": "^17.0.2",
     "react-feather": "^2.0.9",
     "react-icons": "^4.3.1",
+    "react-intersection-observer": "^8.33.1",
     "react-parallax-tilt": "^1.5.90",
     "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.0",
     "react-scroll": "^1.8.4",
     "react-spring": "^9.4.2",
+    "react-visibility-sensor": "^5.1.1",
     "web-vitals": "^2.1.0"
   },
   "scripts": {

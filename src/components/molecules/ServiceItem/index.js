@@ -1,6 +1,5 @@
 import React from 'react';
 import { Code, Smartphone, Image } from 'react-feather';
-
 import {
   styServicesItem,
   styWrapper,
@@ -8,8 +7,9 @@ import {
   styText,
   styIconCircle,
 } from './styles';
-
+import { useInView } from 'react-intersection-observer';
 import ScrollAnimation from 'react-animate-on-scroll';
+import { motion } from 'framer-motion';
 
 const ServiceItem = ({ title, desc }) => {
   const Icon = () => {
@@ -26,22 +26,42 @@ const ServiceItem = ({ title, desc }) => {
     }
   };
 
+  const [ref, inView] = useInView({
+    threshold: 0,
+    triggerOnce: false,
+  });
+
+  const variants = {
+    visible: { opacity: 1, y: 0 },
+    hidden: {
+      opacity: 0,
+      y: 150,
+    },
+  };
+
   return (
-    <div className={styServicesItem}>
-      <ScrollAnimation animateIn="rubberBand">
-        <div className={styWrapper}>
-          <div className={styIcon}>
-            <div className={styIconCircle}>
-              <Icon />
+    <motion.div
+      animate={inView ? 'visible' : 'hidden'}
+      variants={variants}
+      transition={{ duration: 2, ease: 'easeOut' }}
+      ref={ref}
+    >
+      <div className={styServicesItem}>
+        <ScrollAnimation animateIn="rubberBand">
+          <div className={styWrapper}>
+            <div className={styIcon}>
+              <div className={styIconCircle}>
+                <Icon />
+              </div>
+            </div>
+            <div className={styText}>
+              <h3>{title}</h3>
+              <p>{desc}</p>
             </div>
           </div>
-          <div className={styText}>
-            <h3>{title}</h3>
-            <p>{desc}</p>
-          </div>
-        </div>
-      </ScrollAnimation>
-    </div>
+        </ScrollAnimation>
+      </div>
+    </motion.div>
   );
 };
 
