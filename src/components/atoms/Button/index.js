@@ -22,7 +22,11 @@ const Button = ({
 }) => {
   if (secondary) {
     return (
-      <button type={type} className={styContainerSecondary(disabled)} onClick={onClick}>
+      <button
+        type={type}
+        className={styContainerSecondary(disabled)}
+        onClick={onClick}
+      >
         <p className={styTitle(position)}>{title}</p>
       </button>
     );
