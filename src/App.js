@@ -5,11 +5,9 @@ import React from 'react';
 
 function App() {
   return (
-    <React.StrictMode>
-      <Router>
-        <Routes />
-      </Router>
-    </React.StrictMode>
+    <Router>
+      <Routes />
+    </Router>
   );
 }
 
