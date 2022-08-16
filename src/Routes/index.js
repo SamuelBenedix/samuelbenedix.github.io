@@ -17,6 +17,7 @@ const Routes = () => {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/project" element={<Project />} />
+          <Route path="/portofolio" element={<Home />} />
         </Switch>
       </AnimatePresence>
       <BackgroundLogoComp />

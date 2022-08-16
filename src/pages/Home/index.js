@@ -25,7 +25,6 @@ const Home = () => {
     >
       <main className={styMain}>
         <Hero onClick={openModal} />
-
         <AboutShort />
         <Services />
         <Featured />

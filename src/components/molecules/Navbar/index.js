@@ -26,7 +26,7 @@ const Navbar = () => {
 
   useEffect(() => {
     switch (location.pathname) {
-      case '/':
+      case '/portofolio':
         setIndicatorPosition(25);
         setIndicatorWidth(58);
         break;
@@ -64,7 +64,7 @@ const Navbar = () => {
     <div className={styMainMenu}>
       <div className={styContainer}>
         <nav className={styNavbarWrapper}>
-          <Link to="/">
+          <Link to="/portofolio">
             <img src={Logo} alt="Logo" />
           </Link>
           <button
@@ -90,7 +90,7 @@ const Navbar = () => {
               />
               <li className={styNavLink}>
                 <Link
-                  className={styNavItem(location.pathname === '/')}
+                  className={styNavItem(location.pathname === '/portofolio')}
                   to="/"
                   onClick={handleClick}
                 >

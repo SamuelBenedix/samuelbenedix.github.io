@@ -5,12 +5,14 @@ import { styContent, stySection } from './styles';
 
 const Hero = ({ onClick }) => {
   return (
-    <section className={stySection}>
-      <div className={styContent}>
-        <Intro onClick={onClick} />
-        <ProfileIntro />
-      </div>
-    </section>
+    <React.StrictMode>
+      <section className={stySection}>
+        <div className={styContent}>
+          <Intro onClick={onClick} />
+          <ProfileIntro />
+        </div>
+      </section>
+    </React.StrictMode>
   );
 };
 
