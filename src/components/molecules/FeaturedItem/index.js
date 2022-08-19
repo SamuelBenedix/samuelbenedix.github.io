@@ -18,7 +18,6 @@ const FeaturedItem = ({ item }) => {
         <div className={styCover}>
           <div className={styDominant} />
           <img
-            sizes="404px"
             src={item.image_src}
             alt={item.title}
             loading="lazy"

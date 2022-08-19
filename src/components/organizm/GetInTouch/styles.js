@@ -11,7 +11,7 @@ export const stySection = css`
   position: relative;
   margin-top: 100px;
   padding-bottom: 40px;
-  @media (max-width: 480px) and (min-height: 700px) {
+  @media (max-width: 480px) {
     padding-bottom: 10vh;
   }
 `;
@@ -53,6 +53,14 @@ export const stySectionTitle = css`
     left: 50%;
     background-color: ${colors.primary[900]};
     transform: translateX(-50%);
+  }
+
+  @media (max-width: 480px) {
+    text-align: center;
+    h2 {
+      font-weight: 700;
+      font-size: 30px;
+    }
   }
 `;
 

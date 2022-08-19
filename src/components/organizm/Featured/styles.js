@@ -54,13 +54,19 @@ export const stySectionTitle = css`
     background-color: ${colors.primary[900]};
     transform: translateX(-50%);
   }
-`;
 
-export const styServicesContainer = css`
-  margin-top: 32px;
+  @media (max-width: 480px) {
+    text-align: center;
+    h2 {
+      font-weight: 700;
+      font-size: 30px;
+    }
+  }
 `;
 
 export const styFeatured = css`
+  margin: 32px 0px 0px 0px;
+  padding: 10px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;

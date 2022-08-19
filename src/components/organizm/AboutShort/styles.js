@@ -13,8 +13,9 @@ export const stySection = css`
   padding-bottom: 40px;
   margin-bottom: 40px;
 
-  @media (max-width: 480px) and (min-height: 700px) {
+  @media (max-width: 480px) {
     padding-bottom: 10vh;
+    margin-top: 0px;
   }
 `;
 

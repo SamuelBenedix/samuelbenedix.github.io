@@ -3,6 +3,7 @@ import { css } from '@emotion/css';
 export const styFeaturedItem = css`
   flex: 0 0 50%;
   max-width: 100%;
+  position: relative;
 
   @media (min-width: 576px) {
     max-width: 100%;
@@ -10,6 +11,8 @@ export const styFeaturedItem = css`
     padding-left: 15px;
     flex: 0 0 33.333333%;
   }
+
+  padding: 10px;
 `;
 
 export const styCoverWrapper = css`

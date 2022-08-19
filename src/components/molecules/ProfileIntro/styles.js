@@ -27,6 +27,10 @@ export const styPict2 = css`
   @media screen and (max-width: 1400px) {
     width: 400px;
   }
+
+  @media (max-width: 480px) {
+    width: 300px;
+  }
 `;
 
 export const styPictIosDev = css`
@@ -48,6 +52,14 @@ export const styPictIosDev = css`
       width: 130px;
     }
   }
+
+  @media (max-width: 480px) {
+    top: 80px;
+    left: 210px;
+    img {
+      width: 90px;
+    }
+  }
 `;
 
 export const styPictAndroidDev = css`
@@ -63,6 +75,13 @@ export const styPictAndroidDev = css`
   @media screen and (max-width: 1400px) {
     img {
       width: 150px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    left: 2px;
+    img {
+      width: 90px;
     }
   }
 `;
@@ -86,6 +105,14 @@ export const styPictWebDev = css`
       width: 150px;
     }
   }
+
+  @media (max-width: 480px) {
+    top: -100px;
+    left: 210px;
+    img {
+      width: 90px;
+    }
+  }
 `;
 
 export const styPictDesignDev = css`
@@ -101,6 +128,14 @@ export const styPictDesignDev = css`
   @media screen and (max-width: 1400px) {
     img {
       width: 130px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    left: 10px;
+    top: -100px;
+    img {
+      width: 90px;
     }
   }
 `;

@@ -54,16 +54,31 @@ export const stySectionTitle = css`
     background-color: ${colors.primary[900]};
     transform: translateX(-50%);
   }
+
+  @media (max-width: 480px) {
+    text-align: center;
+    h2 {
+      font-weight: 700;
+      font-size: 30px;
+    }
+  }
 `;
 
 export const styServicesContainer = css`
-  margin-top: 64px;
+  @media (max-width: 480px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 export const styServices = css`
+  margin-top: 64px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
+
+  @media (max-width: 480px) {
+    margin-bottom: 0px;
+  }
 `;

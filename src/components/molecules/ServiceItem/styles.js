@@ -10,6 +10,11 @@ export const styServicesItem = css`
     padding-left: 15px;
     flex: 0 0 33.333333%;
   }
+
+  @media (max-width: 480px) {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 `;
 
 export const styWrapper = css`

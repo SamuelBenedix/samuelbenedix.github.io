@@ -16,8 +16,16 @@ export const styName = css`
   font-size: 90px;
   line-height: 90px;
   font-weight: 700;
+
   @media screen and (max-width: 1024px) {
     text-align: center;
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 40px;
+    line-height: 50px;
   }
 `;
 
@@ -30,6 +38,11 @@ export const styTitle = css`
   margin-bottom: 20px;
   @media screen and (max-width: 1024px) {
     text-align: center;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 20px;
+    line-height: 10px;
   }
 `;
 
@@ -47,6 +60,9 @@ export const styBtnPosition = (position = false) => css`
   width: 100%;
   height: 100vh;
   @media screen and (max-width: 1024px) {
-    left: 24%;
+    left: 15%;
+  }
+  @media screen and (max-width: 480px) {
+    left: 0%;
   }
 `;

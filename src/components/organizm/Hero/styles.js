@@ -10,9 +10,11 @@ export const stySection = css`
   padding-top: 0px;
   position: relative;
   margin-bottom: 50px;
-  @media (max-width: 480px) and (min-height: 700px) {
-    padding-bottom: 10vh;
+
+  @media (max-width: 480px) {
+    margin-bottom: 0px;
   }
+
   @media screen and (max-width: 1024px) {
     margin-top: 50px;
   }
