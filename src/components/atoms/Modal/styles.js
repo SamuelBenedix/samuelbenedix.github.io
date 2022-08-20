@@ -53,6 +53,10 @@ export const styWrapper = (showModal) => css`
   @media (min-width: 576px) {
     min-height: calc(100% - 3.5rem);
   }
+
+  @media (max-width: 480px) {
+    padding: 0px;
+  }
 `;
 
 export const styModalClose = css`
@@ -66,6 +70,10 @@ export const styModalClose = css`
     svg {
       stroke: ${colors.primary[900]};
     }
+  }
+
+  @media (max-width: 480px) {
+    padding: 10px 25px;
   }
 `;
 
@@ -85,6 +93,10 @@ export const styContent = css`
     color: #757c98;
     max-width: 70%;
     text-align: center;
+  }
+
+  @media (max-width: 480px) {
+    padding: 25px 0px;
   }
 `;
 

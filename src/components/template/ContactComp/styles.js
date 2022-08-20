@@ -66,6 +66,11 @@ export const styContent = css`
     min-width: 200px;
     width: calc(100% - 50px);
   }
+
+  @media screen and (max-width: 480px) {
+    min-width: 100%;
+    border-radius: 0px;
+  }
 `;
 
 export const styContactInfo = css`
@@ -157,6 +162,11 @@ export const styContactForm = css`
     position: relative;
     padding: 30px 30px;
     margin: 0;
+    width: 100%;
+  }
+
+  @media screen and (max-width: 480px) {
+    padding: 30px 25px;
     width: 100%;
   }
 `;

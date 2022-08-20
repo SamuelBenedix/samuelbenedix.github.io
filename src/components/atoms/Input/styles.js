@@ -11,6 +11,10 @@ export const styWrapper = css`
   transition: all 0.1s ease;
   cursor: unset;
   vertical-align: top;
+
+  @media screen and (max-width: 480px) {
+    width: 85%;
+  }
 `;
 
 export const styLabel = (focus) => css`

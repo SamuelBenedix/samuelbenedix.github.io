@@ -30,6 +30,10 @@ export const styCoverWrapper = css`
 export const styTextOverlay = css`
   height: 100%;
   display: flex;
+
+  @media (min-width: 576px) {
+    padding-left: 20px;
+  }
 `;
 
 export const styText = css`

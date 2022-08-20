@@ -38,7 +38,7 @@ export const styContent = css`
 `;
 
 export const styAbout = css`
-  width: 50%;
+  width: 65%;
   h2 {
     font-weight: 700;
     font-size: 35px;

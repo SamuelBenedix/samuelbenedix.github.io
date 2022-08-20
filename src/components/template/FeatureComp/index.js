@@ -9,7 +9,6 @@ const FeatureComp = ({ onClick }) => {
       <div className={styContent}>
         <Featured />
       </div>
-
       <Button mail onClick={onClick} />
     </section>
   );
