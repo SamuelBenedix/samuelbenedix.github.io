@@ -38,7 +38,7 @@ const Intro = ({ onClick }) => {
     <div>
       <p className={styIntro}>Hello, my name is</p>
       <h1 className={styName}>
-        Berby Febriana Audrey<span className={styDot}>.</span>
+        Samuel B<span className={styDot}>.</span>
       </h1>
       <h3 className={styTitle}>
         Designer
